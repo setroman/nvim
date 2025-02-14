@@ -4,6 +4,9 @@
 -- ************************************
 local opt = vim.o
 
+-- Setea el espacio como tecla principal <leader> = ' '
+vim.g.mapleader = " "
+
 -- Mostrar filas numeradas
 opt.number = true
 
