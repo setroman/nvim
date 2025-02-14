@@ -30,6 +30,11 @@
 >|***Ctrl + k***            |   moverse hacia arriba |
 >|***Ctrl + h***            |   moverse hacia la izquierda |
 >|***Ctrl + l***            |   moverse hacia la derecha |
+
+### (N) - Modo Normal
+
+>| *atajo* | *función* |
+>|:---:|:---|
 >|***leader + n + h***      |   límpia la expresión de busqueda |
 >|***leader + s + v***      |   división vertical |
 >|***leader + s + h***      |   división horizontal |
