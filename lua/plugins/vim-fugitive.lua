@@ -3,7 +3,7 @@
 -- ********************************
 
 -- Juego de teclas
-mapping = require("config.keymaps.fugitive")
+local mapping = require("config.keymaps.fugitive")
 
 -- Extension fugitive para esar el cliente git 
 return {

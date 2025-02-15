@@ -38,6 +38,8 @@
 
 | *atajo* | *función* |
 |:---:|:---|
+|***Alt + k***              |   mueve la fila actual hacia arriba|
+|***Alt + j***              |   mueve la fila actual hacia abajo|
 |***leader + n + h***      |   límpia la expresión de busqueda |
 |***leader + s + v***      |   división vertical |
 |***leader + s + h***      |   división horizontal |

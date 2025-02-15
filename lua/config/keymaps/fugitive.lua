@@ -5,6 +5,6 @@
 return {
   keys = {
     {"<leader>gf",":Git ferch --all -p<cr>","Git fetch prune all"},
-    {"<leader>gp","Git pull<cr>","Git pull"},
+    {"<leader>gp",":Git pull<cr>","Git pull"},
   }
 }

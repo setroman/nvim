@@ -16,6 +16,8 @@ keymap("i", "<C-l>", "<Right>", "Mueve el cursor a la derecha")
 
 
 keymap("n", "<leader>nh", ":nohl<CR>", "Resalte de busqueda borrado")
+keymap("n", "<A-j>", ":m+1<CR>", "Resalte de busqueda borrado")
+keymap("n", "<A-k>", ":m-2<CR>", "Resalte de busqueda borrado")
 
 -- increment/decrement numbers
 -- keymap("n", "<leader>+", "<C-a>", "Incrementa número") -- incremento
