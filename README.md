@@ -7,7 +7,7 @@
 ## Caracteristicas principales
 
 - Gestor de paquetes [Lazy](https://github.com/folke/lazy.nvim)
-- Tema de colores [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
+- Tema de colores [catppuccin](https://github.com/catppuccin/nvim)
 - [Fugitive](https://github.com/tpope/vim-fugitive) como interface del cliente git. Y [gitsings](https://github.com/lewis6991/gitsigns.nvim) para colorear los cambios en los proyectos.
 
 ## [Configuración básica](/lua/config/settings.lua)
