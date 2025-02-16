@@ -1,5 +1,5 @@
 -- Configuración básica
-require("config.settings")
+require("config.options")
 
 -- Gestor de paquetes lazy
 require("config.lazy")

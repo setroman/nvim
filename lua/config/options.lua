@@ -22,7 +22,7 @@ opt.wrap = false -- false: Los reglones se extienden más alla del limite de la 
 opt.ignorecase = true -- ignora mayúsculas al reluzar búsquedas
 opt.smartcase = true -- si se incluyen mayusculas y minúsculas en la búsqueda, pasa a modo sendible entre mayusculas y minusculas
 
-opt.cursorline = true -- resalta la línea del cursor
+opt.cursorline = false -- resalta la línea del cursor
 
 -- (el terminal debe soportar true-colors)
 opt.termguicolors = true -- activa colores del terminal para el tema de colores (colorschemes)
