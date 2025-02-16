@@ -7,11 +7,8 @@ local opt = vim.o
 -- Setea el espacio como tecla principal <leader> = ' '
 vim.g.mapleader = " "
 
--- Mostrar filas numeradas
-opt.number = true
-
--- Muestra los números de las filas de manera relativa
-opt.relativenumber = true
+opt.number = true -- Mostrar filas numeradas
+opt.relativenumber = true -- Muestra los números de las filas de manera relativa
 
 -- tabs & indentación (sangría)
 opt.tabstop = 2 -- 2 espacios por tabs (prettier default)
