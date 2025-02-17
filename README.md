@@ -9,6 +9,12 @@
 - Gestor de paquetes [Lazy](https://github.com/folke/lazy.nvim)
 - Tema de colores [catppuccin](https://github.com/catppuccin/nvim)
 - [Fugitive](https://github.com/tpope/vim-fugitive) como interface del cliente git. Y [gitsings](https://github.com/lewis6991/gitsigns.nvim) para colorear los cambios en los proyectos.
+- Parcer de código [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+
+### Dependencias incluidas
+
+- [nvim-treesitter-textobjects](nvim-treesitter-textobjects) para el manejo y navegación de objetos
+- [nvim-ts-autotag](nvim-treesitter-textobjects) para el manejo automático de etiquetas html
 
 ## [Configuración básica](/lua/config/settings.lua)
 
