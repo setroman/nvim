@@ -10,11 +10,16 @@
 - Tema de colores [catppuccin](https://github.com/catppuccin/nvim)
 - [Fugitive](https://github.com/tpope/vim-fugitive) como interface del cliente git. Y [gitsings](https://github.com/lewis6991/gitsigns.nvim) para colorear los cambios en los proyectos.
 - Parcer de código [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [Mason](https://github.com/williamboman/mason.nvim) para la gestión de los paquetes LSP, Linter, fotmater, DPS.
+- [Lspconfig](https://github.com/neovim/nvim-lspconfig) para configuración de los LSP...
 
 ### Dependencias incluidas
 
 - [nvim-treesitter-textobjects](nvim-treesitter-textobjects) para el manejo y navegación de objetos
 - [nvim-ts-autotag](nvim-treesitter-textobjects) para el manejo automático de etiquetas html
+- [neodev](https://github.com/folke/neodev.nvim) para la confuguración automática de Lua lsp
+- [mason-lsconfig](https://github.com/williamboman/mason-lspconfig.nvim) facilita el uso de mason y lspconfig juntos
+- [mason-tool-installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
 
 ## [Configuración básica](/lua/config/settings.lua)
 
