@@ -28,10 +28,10 @@ keymap("n", "<leader>sv", "<C-w>v", "Divide la ventana verticalmente") -- divide
 keymap("n", "<leader>sh", "<C-w>s", "Divide la ventana horizontalmente") -- divide la ventana horizontalmente
 keymap("n", "<leader>se", "<C-w>=", "Divisiones del mismo tamaño") -- hacer las diviciones del mismo ancho y alto
 keymap("n", "<leader>sx", "<cmd>close<CR>", "Cierra la divición actual") -- cierra la división actual de la ventana
-keymap("n", "<C-l>", "<C-w><C-l>", "Moverce a la división derecha") -- divide la ventana horizontalmente
-keymap("n", "<C-k>", "<C-w><C-k>", "Moverse a la división de arriba") -- divide la ventana horizontalmente
-keymap("n", "<C-j>", "<C-w><C-j>", "Moverce a la división de abajo") -- divide la ventana horizontalmente
-keymap("n", "<C-h>", "<C-w><C-h>", "Moverse a la división izquierda") -- divide la ventana horizontalmente
+keymap("n", "<C-l>", "<C-w><C-l>", "Moverce a la división derecha")
+keymap("n", "<C-k>", "<C-w><C-k>", "Moverse a la división de arriba")
+keymap("n", "<C-j>", "<C-w><C-j>", "Moverce a la división de abajo")
+keymap("n", "<C-h>", "<C-w><C-h>", "Moverse a la división izquierda")
 
 -- administeación de pestañas
 keymap("n", "<leader>to", "<cmd>tabnew<CR>", "Nueva pestaña") -- nueva pestaña

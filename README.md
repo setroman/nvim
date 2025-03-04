@@ -12,14 +12,25 @@
 - Parcer de código [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Mason](https://github.com/williamboman/mason.nvim) para la gestión de los paquetes LSP, Linter, fotmater, DPS.
 - [Lspconfig](https://github.com/neovim/nvim-lspconfig) para configuración de los LSP...
+- Autocompletado con [cmp](https://github.com/hrsh7th/nvim-cmp) 
+- Previsuavilización de archivos markdown con [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
 
 ### Dependencias incluidas
 
-- [nvim-treesitter-textobjects](nvim-treesitter-textobjects) para el manejo y navegación de objetos
-- [nvim-ts-autotag](nvim-treesitter-textobjects) para el manejo automático de etiquetas html
+- [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) para el manejo y navegación de objetos
+- [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) para el manejo automático de etiquetas html
 - [neodev](https://github.com/folke/neodev.nvim) para la confuguración automática de Lua lsp
 - [mason-lsconfig](https://github.com/williamboman/mason-lspconfig.nvim) facilita el uso de mason y lspconfig juntos
 - [mason-tool-installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
+- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) autocompletado en el buffer actual
+- [cmp-path](https://github.com/hrsh7th/cmp-path) autocompletado para rutas de archivos
+- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) autocompletado en LSP
+- [cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua) autocompletado para Lua (útil el la confuguración)
+- [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline) autocompletado para línea de comanfo
+- [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip) autocompletado con intagración de snippets
+- [LuaSnip](https://github.com/L3MON4D3/LuaSnip) motor de snippets
+- [lspkind](https://github.com/onsails/lspkind.nvim) iconos para el menú del autocompletado
+- [nvim-ts-autopairs](https://github.com/windwp/nvim-autopairs) catácteres pares acutoáticos
 
 ## [Configuración básica](/lua/config/settings.lua)
 
@@ -28,7 +39,7 @@
 - *espacio* (" ") como tecla principal (***leader***).
 - *wrap* desactivado.
 - Las busquedas ignoran las mayusculas de las minusculas por defecto, pero si en la busqueda se incluyen ambas, no se ignora la diferencia.
-- Resalta la línea conde se encuentra el cursor.
+- Resalta la línea donde se encuentra el cursor.
 - *termguicolors* habilitado. Con *background* en *dark* y columna de simbolos.
 - División de pantala hacia la derecha o hacia abajo.
 - *swapfie* desacticado.
@@ -65,5 +76,3 @@
 |***leader + t + n***      |   pestaña siguiente |
 |***leader + t + p***      |   pestaña anterior |
 |***leader + t + f***      |   Abre el buffer en una pestaña |
-
-
