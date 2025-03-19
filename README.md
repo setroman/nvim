@@ -7,13 +7,14 @@
 ## Caracteristicas principales
 
 - Gestor de paquetes [Lazy](https://github.com/folke/lazy.nvim)
-- Tema de colores [catppuccin](https://github.com/catppuccin/nvim)
+- Tema de colores [kanagawa](https://github.com/rebelot/kanagawa.nvim)
 - [Fugitive](https://github.com/tpope/vim-fugitive) como interface del cliente git. Y [gitsings](https://github.com/lewis6991/gitsigns.nvim) para colorear los cambios en los proyectos.
 - Parcer de código [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Mason](https://github.com/williamboman/mason.nvim) para la gestión de los paquetes LSP, Linter, fotmater, DPS.
 - [Lspconfig](https://github.com/neovim/nvim-lspconfig) para configuración de los LSP...
 - Autocompletado con [cmp](https://github.com/hrsh7th/nvim-cmp) 
 - Previsuavilización de archivos markdown con [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
+- [Lualine](https://github.com/nvim-lualine/lualine.nvim) para enbellecer la línea de estado
 
 ### Dependencias incluidas
 
@@ -31,6 +32,7 @@
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip) motor de snippets
 - [lspkind](https://github.com/onsails/lspkind.nvim) iconos para el menú del autocompletado
 - [nvim-ts-autopairs](https://github.com/windwp/nvim-autopairs) catácteres pares acutoáticos
+- [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) iconos web
 
 ## [Configuración básica](/lua/config/settings.lua)
 
