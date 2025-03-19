@@ -1,1 +1,1 @@
-return require("plugins.colorscheme.catppuccin")
+return require("plugins.colorscheme.kanagawa")
