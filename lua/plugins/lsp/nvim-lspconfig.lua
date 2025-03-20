@@ -48,6 +48,21 @@ local config = function()
       }
     }
   })
+
+  -- Confuguro rust_analyzer
+  lspconfig.rust_analyzer.setup({
+    on_attach = mapping.on_attach,
+    -- settings = {
+    --   ["rust_analyzer"] = {
+    --     cargo = {
+    --       allFeatures = true, -- Habilita todas las caracteristicas de Cargo
+    --     },
+    --     checkOnSave = {
+    --       command = "clippy", -- Usar clippy para verificación en guardado.
+    --     },
+    --   },
+    -- },
+  })
 end
 
 return {
