@@ -28,6 +28,10 @@ keymap("n", "<leader>sv", "<C-w>v", "Divide la ventana verticalmente") -- divide
 keymap("n", "<leader>sh", "<C-w>s", "Divide la ventana horizontalmente") -- divide la ventana horizontalmente
 keymap("n", "<leader>se", "<C-w>=", "Divisiones del mismo tamaño") -- hacer las diviciones del mismo ancho y alto
 keymap("n", "<leader>sx", "<cmd>close<CR>", "Cierra la divición actual") -- cierra la división actual de la ventana
+keymap("n","+",[[<cmd>vertical resize +5<cr>]],"Agranda verticalmente la ventana")
+keymap("n","*",[[<cmd>vertical resize -5<cr>]],"Achica verticalmente la ventana")
+keymap("n","-",[[<cmd>horizontal resize +2<cr>]],"Agranda horizontalmente la ventana")
+keymap("n","_",[[<cmd>horizontal resize -2<cr>]],"Achica horizontalmente la ventana")
 keymap("n", "<C-l>", "<C-w><C-l>", "Moverce a la división derecha")
 keymap("n", "<C-k>", "<C-w><C-k>", "Moverse a la división de arriba")
 keymap("n", "<C-j>", "<C-w><C-j>", "Moverce a la división de abajo")
