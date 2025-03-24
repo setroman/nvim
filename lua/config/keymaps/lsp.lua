@@ -34,9 +34,9 @@ return {
     -- keymap("n", "]d", vim.diagnostic.goto_next, "Ir al próximo diagnóstico en el búfer") -- ir al próximo diagnóstico en el búfer
 
     -- Establece la combinación de teclas
-    -- keymap("n", "gR", "<cmd>Telescope lsp_references<CR>", "Mostrar referencia LSP")                   -- mostrar la definicipon, referencia
+    keymap("n", "gR", "<cmd>Telescope lsp_references<CR>", "Mostrar referencia LSP")                   -- mostrar la definicipon, referencia
     keymap("n", "gD", lsp.buf.declaration, "Ir a la decraración")                                      -- ir a la declaración
-    -- keymap("n", "gd", "<cmd>Telescope lsp_definitions<CR>", "Mostrar definición de LSP")               -- mostrar definición LSP
+    keymap("n", "gd", "<cmd>Telescope lsp_definitions<CR>", "Mostrar definición de LSP")               -- mostrar definición LSP
     -- keymap("n", "gI", "<cmd>Telescope lsp_implementations<CR>", "Mostrar implenentación de LSP")       -- mostrar implementación LSP
     -- keymap("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", "Mostrar definición de tipos de LSP") -- mostrar la definición de tipos de LSP
     keymap({ "n", "v" }, "<leader>ca", lsp.buf.code_action, "Ver acciones de código disponibles")      -- ver acciones de código disponibles, en modo visual se aplicara a la selección
