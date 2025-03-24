@@ -43,12 +43,6 @@ return {
           position = "left",  -- Posición del explorador (left, right, float)
           width = 30,  -- Ancho del explorador
           mappings = mappings,
-          -- mappings = {
-          --   ["<CR>"] = "open",  -- Abrir archivo o carpeta
-          --   ["l"] = "open",     -- Abrir archivo o carpeta (alternativo)
-          --   ["h"] = "close_node",  -- Cerrar carpeta
-          --   ["<C-e>"] = "close_window",  -- Cerrar Neo-tree
-          -- },
         },
         filesystem = {
           filtered_items = {
@@ -61,7 +55,5 @@ return {
           },
         },
       })
-      -- Atajo de teclado para abrir/cerrar Neo-tree
-      -- vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true })
     end,
 }
