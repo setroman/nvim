@@ -55,11 +55,11 @@
 
 | *atajo* | *función* |
 |:---:|:---|
-|***j + k***               |   salir del modo inserción |
-|***Ctrl + j***            |   moverse hacia abajo |
-|***Ctrl + k***            |   moverse hacia arriba |
-|***Ctrl + h***            |   moverse hacia la izquierda |
-|***Ctrl + l***            |   moverse hacia la derecha |
+|***j + k***                |   salir del modo inserción |
+|***Ctrl + j***             |   moverse hacia abajo |
+|***Ctrl + k***             |   moverse hacia arriba |
+|***Ctrl + h***             |   moverse hacia la izquierda |
+|***Ctrl + l***             |   moverse hacia la derecha |
 
 ### (N) - Modo Normal
 
@@ -67,17 +67,18 @@
 |:---:|:---|
 |***Alt + k***              |   mueve la fila actual hacia arriba|
 |***Alt + j***              |   mueve la fila actual hacia abajo|
-|***leader + n + h***      |   límpia la expresión de busqueda |
-|***leader + s + v***      |   división vertical |
-|***leader + s + h***      |   división horizontal |
-|***leader + s + e***      |   iguala el tamaño de las divisiones |
-|***leader + s + x***      |   cierar división |
-|***Ctrl + l***            |   moverse a la división derecha |
-|***Ctrl + k***            |   moverse a la división de arriba |
-|***Ctrl + j***            |   moverse a la división de abajo |
-|***Ctrl + h***            |   moverse a la división izquierda|
-|***leader + t + o***      |   nueva pestaña |
-|***leader + t + x***      |   cerrar pestaña|
-|***leader + t + n***      |   pestaña siguiente |
-|***leader + t + p***      |   pestaña anterior |
-|***leader + t + f***      |   Abre el buffer en una pestaña |
+|***leader + n + h***       |   límpia la expresión de busqueda |
+|***leader + s + v***       |   división vertical |
+|***leader + s + h***       |   división horizontal |
+|***leader + s + e***       |   iguala el tamaño de las divisiones |
+|***leader + s + x***       |   cierar división |
+|***Ctrl + l***             |   moverse a la división derecha |
+|***Ctrl + k***             |   moverse a la división de arriba |
+|***Ctrl + j***             |   moverse a la división de abajo |
+|***Ctrl + h***             |   moverse a la división izquierda|
+|***leader + t + o***       |   nueva pestaña |
+|***leader + t + x***       |   cerrar pestaña|
+|***leader + t + n***       |   pestaña siguiente |
+|***leader + t + p***       |   pestaña anterior |
+|***leader + t + f***       |   Abre el buffer en una pestaña |
+|***leader + e ***          |   Abre/Cierra el explorador de archivos |

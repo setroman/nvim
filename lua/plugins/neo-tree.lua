@@ -11,6 +11,7 @@ return {
       "MunifTanjim/nui.nvim",  -- Dependencia requerida
     },
     config = function()
+      local mappings = require("config.keymaps.neo-tree")()
       -- Configuración de neo-tree (ver más abajo)
       require("neo-tree").setup({
         close_if_last_window = true,  -- Cerrar Neo-tree si es la última ventana abierta
@@ -41,12 +42,13 @@ return {
         window = {
           position = "left",  -- Posición del explorador (left, right, float)
           width = 30,  -- Ancho del explorador
-          mappings = {
-            ["<CR>"] = "open",  -- Abrir archivo o carpeta
-            ["l"] = "open",     -- Abrir archivo o carpeta (alternativo)
-            ["h"] = "close_node",  -- Cerrar carpeta
-            ["<C-e>"] = "close_window",  -- Cerrar Neo-tree
-          },
+          mappings = mappings,
+          -- mappings = {
+          --   ["<CR>"] = "open",  -- Abrir archivo o carpeta
+          --   ["l"] = "open",     -- Abrir archivo o carpeta (alternativo)
+          --   ["h"] = "close_node",  -- Cerrar carpeta
+          --   ["<C-e>"] = "close_window",  -- Cerrar Neo-tree
+          -- },
         },
         filesystem = {
           filtered_items = {
@@ -60,6 +62,6 @@ return {
         },
       })
       -- Atajo de teclado para abrir/cerrar Neo-tree
-      vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true })
+      -- vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true })
     end,
 }
