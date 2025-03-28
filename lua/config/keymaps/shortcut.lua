@@ -14,10 +14,7 @@ keymap("i", "<C-k>", "<Up>", "Mueve el cursor hacia arriba")
 keymap("i", "<C-h>", "<Left>", "Mueve el cursor a la izquierda")
 keymap("i", "<C-l>", "<Right>", "Mueve el cursor a la derecha")
 
-
 keymap("n", "<leader>nh", ":nohl<CR>", "Resalte de busqueda borrado")
-keymap("n", "<A-j>", ":m+1<CR>", "Resalte de busqueda borrado")
-keymap("n", "<A-k>", ":m-2<CR>", "Resalte de busqueda borrado")
 
 -- increment/decrement numbers
 -- keymap("n", "<leader>+", "<C-a>", "Incrementa número") -- incremento
@@ -44,3 +41,12 @@ keymap("n", "<leader>tn", "<cmd>tabn<CR>", "Pestaña siguiente") --  ir a la pro
 keymap("n", "<leader>tp", "<cmd>tabp<CR>", "Pestaña anterior") --  ir a la pestaña previa
 keymap("n", "<leader>tf", "<cmd>tabnew %<CR>", "Abre el buffer actual en una nueva pestaña") --  mueve el buffer actual a una nueva pestaña
 
+-- Sangria (indentado)
+keymap("v","<","<gv","Deshacer sangria")
+keymap("v",">",">gv","Aumenta sangria")
+
+-- Movimiento de texto envuelto
+keymap("n", "<A-j>", ":m+1<CR>", "Mueve la línea hacia abajo")
+keymap("n", "<A-k>", ":m-2<CR>", "Mueve la línea hacia arriba")
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", "Mueve las líneas seleccionadas hacia abajo")
+keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", "Mueve las línea seleccionadas hacia arriba")
