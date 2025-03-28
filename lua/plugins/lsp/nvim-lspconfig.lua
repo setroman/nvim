@@ -37,7 +37,10 @@ local config = function()
   lspconfig.marksman.setup({
     on_attach = mapping.on_attach
   })
-
+  -- pylsp - python
+  lspconfig.pylsp.setup({
+    on_attach = mapping.on_attach
+  })
   -- lua_ls - lua
   lspconfig.lua_ls.setup({
     on_attach = mapping.on_attach,

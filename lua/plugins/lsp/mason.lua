@@ -39,6 +39,7 @@ return {
         "angularls",
         "astro",
         "svelte",
+        "pylsp"
       },
       automatic_installation = true,
     })
