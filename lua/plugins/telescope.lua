@@ -17,7 +17,6 @@ return {
   },
   config = function()
     local telescope = require("telescope")
-    local actions = require("telescope.actions")
     local mappings = require("config.keymaps.telescope")
 
     telescope.setup({
