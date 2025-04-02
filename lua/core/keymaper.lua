@@ -50,25 +50,27 @@ end
 ---@param cmd function | string
 ---@param desc? string
 ---@param icon? string
-M.vkm = function(kb, cmd, desc, icon) M.keymap('v', kb, cmd, desc, icon) end
+M.vkm = function(kb, cmd, desc, icon) M.km('v', kb, cmd, desc, icon) end
 
 --- Crea atajos en el modo insersión
 ---@param kb string
 ---@param cmd function | string
 ---@param desc? string
 ---@param icon? string
-M.ikm = function(kb, cmd, desc, icon) M.keymap('i', kb, cmd, desc, icon) end
+M.ikm = function(kb, cmd, desc, icon) M.km('i', kb, cmd, desc, icon) end
 
 --- Crea atajos en el modo normal
 ---@param kb string
 ---@param cmd function | string
 ---@param desc? string
 ---@param icon? string
-M.nkm = function(kb, cmd, desc, icon) M.keymap('n', kb, cmd, desc, icon) end
+M.nkm = function(kb, cmd, desc, icon) M.km('n', kb, cmd, desc, icon) end
 
 --- Crea atajos para el modo terminal
 ---@param kb string
 ---@param cmd function | string
 ---@param desc? string
 ---@param icon? string
-M.tkm = function(kb, cmd, desc, icon) M.keymap('t', kb, cmd, desc, icon) end
+M.tkm = function(kb, cmd, desc, icon) M.km('t', kb, cmd, desc, icon) end
+
+return M
