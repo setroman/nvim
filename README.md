@@ -16,6 +16,7 @@
 - Previsuavilización de archivos markdown con [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim) para enbellecer la línea de estado
 - [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) para el explorador de archivos
+- [Noice](https://github.com/folke/noive.nvim) para gestionar los mensajes.
 
 ### Dependencias incluidas
 
@@ -36,6 +37,7 @@
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) iconos web
 - [plenary](https://github.com/nvim-lua/plenary.nvim) para no repetir las funciones lua
 - [nui](https://github.com/MunifTanjim/nui,nvim) biblioteca de interface de usuario para Neovim
+- [notify](https://github.com/rcarriga/nvim-notigy) Notificaciones elegantes, confugurable u
 
 ## [Configuración básica](/lua/config/settings.lua)
 

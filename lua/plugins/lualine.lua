@@ -5,7 +5,7 @@ return{
   config = function()
     local lualine = require("lualine")
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
-
+    local noice = require("noice")
 
     -- local colors = {
     --   blue = "#65D1FF",
@@ -57,6 +57,9 @@ return{
       --   theme = my_lualine_theme,
       -- },
       sections = {
+        lualine_c = {
+          { noice.api.statusline.mode.get, cond = noice.api.statusline.mode.has }
+        },
         lualine_x = {
           {
             lazy_status.updates,
