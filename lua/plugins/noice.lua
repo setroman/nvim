@@ -17,9 +17,46 @@ return {
           ["vim.lsp.util.stylize_markdown"] = true,
           ["cmp.entry.get_documentation"] = true,
         },
-        -- signature = {
-        --   enabled = false,  -- Desactiva la firma LSP (usa lspsaga.nvim o otro plugin)
-        -- },
+        signature = {
+          enabled = false,  -- Desactiva la firma LSP (usa lspsaga.nvim o otro plugin)
+        },
+        hover = {
+          enabled = true,
+          silent = true,   -- No muestra "No information available"
+          view = "hover",  -- Usa la ventana flotante de Noice
+          border = {
+            style = "rounded", -- estilo redondeado
+          },
+        },
+        diagnostics = {
+          enabled = true,
+          -- Opciones avanzadas para diagnostics en línea
+          virtual_text = {
+            format = function(diagnostic)
+              return string.format(
+                "%s (%s: %s)",
+                diagnostic.message,
+                diagnostic.source,
+                diagnostic.code
+              )
+            end,
+          },
+        },
+      },
+      routes = {
+        -- Oculta mensajes redundantes
+        {
+          filter = {
+            event = "notify",
+            find = "No information available",
+          },
+          opts = { skip = true },
+        },
+        -- Muestra diagnostics como notificaciones flotantes
+        {
+          view = "notify",
+          filter = { event = "lsp", kind = "diagnostic" },
+        },
       },
       presets = {
         bottom_search = true, -- Muestra la búsqueda en la parte inferior como en classic vim

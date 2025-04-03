@@ -12,10 +12,11 @@ return {
       vim.keymap.set(mode, lhs, rhs, {desc = desc})
     end
     -- Ver`:help vim.diagnostic.*` para obtener documentación sobre cualquiera de las siguientes funciones
-    keymap('n', '<leader>D', vim.diagnostic.open_float, 'Muastra el diagnóstico')
-    keymap('n', '[d', vim.diagnostic.goto_prev, 'Diagnóstico previo')
-    keymap('n', ']d', vim.diagnostic.goto_prev, 'Diagnóstico siguiente')
-    keymap('n', '<space>q', vim.diagnostic.setloclist)
+    keymap('n', '<leader>dd', vim.diagnostic.open_float, 'Detalle del diagnóstico')
+    keymap('n', '<leader>dp', vim.diagnostic.goto_prev, 'Diagnóstico previo')
+    keymap('n', '<leader>dn', vim.diagnostic.goto_next, 'Diagnóstico siguiente')
+    keymap('n', '<leader>dn', vim.diagnostic.goto_next, 'Diagnóstico siguiente')
+    keymap('n', '<space>db', vim.diagnostic.setloclist,'Agrega diagnósticos a la lista')
   end,
 
   -- Atajos locales de bugger
@@ -28,14 +29,14 @@ return {
     end
 
     -- Diagnósticos
-    -- keymap("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", "Mostrar diagnóstico de búfer") -- mostrar diagnóstico de búfer
+    keymap("n", "<leader>fd", "<cmd>Telescope diagnostics bufnr=0<CR>", "Mostrar diagnóstico de búfer") -- mostrar diagnóstico de búfer
     -- keymap("n", "<leader>d", vim.diagnostic.open_float, "Mostrar diagnóstico por linea") -- mostrar diagnóstico por linea
     -- keymap("n", "[d", vim.diagnostic.goto_prev, "Ir a anterior diagnóstico en el búfer") -- ir a anterior diagnóstico en el búfer
     -- keymap("n", "]d", vim.diagnostic.goto_next, "Ir al próximo diagnóstico en el búfer") -- ir al próximo diagnóstico en el búfer
 
     -- Establece la combinación de teclas
     keymap("n", "gR", "<cmd>Telescope lsp_references<CR>", "Mostrar referencia LSP")                   -- mostrar la definicipon, referencia
-    keymap("n", "gD", lsp.buf.declaration, "Ir a la decraración")                                      -- ir a la declaración
+    keymap("n", "gD", lsp.buf.declaration, "Ir a la declaración")                                      -- ir a la declaración
     keymap("n", "gd", "<cmd>Telescope lsp_definitions<CR>", "Mostrar definición de LSP")               -- mostrar definición LSP
     -- keymap("n", "gI", "<cmd>Telescope lsp_implementations<CR>", "Mostrar implenentación de LSP")       -- mostrar implementación LSP
     -- keymap("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", "Mostrar definición de tipos de LSP") -- mostrar la definición de tipos de LSP

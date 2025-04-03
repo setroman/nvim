@@ -1,4 +1,6 @@
--- lualine.nvim (barra de estado)
+-- **************************************
+-- *** Una barra de estado más bonita ***
+-- **************************************
 return{
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },  -- Iconos opcionales
