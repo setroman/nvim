@@ -1,8 +1,6 @@
 -- **********************************************************
 -- ***  Atajo de teclas para autocompletado con nvim-cmd  ***
 -- **********************************************************
-
-
 return function (cmp,luasnip)
   return {
     -- Mapeos de teclas

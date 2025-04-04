@@ -4,9 +4,6 @@
 -- ************************************
 local opt = vim.o
 
--- Setea el espacio como tecla principal <leader> = ' '
-vim.g.mapleader = " "
-
 opt.number = true -- Mostrar filas numeradas
 opt.relativenumber = true -- Muestra los números de las filas de manera relativa
 
@@ -24,6 +21,7 @@ opt.smartcase = true -- si se incluyen mayusculas y minúsculas en la búsqueda,
 
 opt.cursorline = false -- resalta la línea del cursor
 
+opt.shell = "powershell" -- usa powershell
 -- (el terminal debe soportar true-colors)
 opt.termguicolors = true -- activa colores del terminal para el tema de colores (colorschemes)
 opt.background = "dark" -- colorschemes  que pueden ser claros u oscuro se oscureceran

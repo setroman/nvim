@@ -1,7 +1,7 @@
 -- ************************************************
 -- *** Atajos de teclas para la extensión Noice ***
 -- ************************************************
-local nkm = require("core.keymaper").nkm
+local nkm = require("core.keymapper").nkm
 local noice = require("noice")
 
 -- Creación de atajos

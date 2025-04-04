@@ -1,7 +1,7 @@
 --  *****************************************
 --  *** Atajos de teclado para Bufferline ***
 --  *****************************************
-local nkm = require("core.keymaper").nkm
+local nkm = require("core.keymapper").nkm
 
 -- Creacion de atajos
 nkm(">", "<Cmd>BufferLineCycleNext<CR>", "Siguiente buffer")

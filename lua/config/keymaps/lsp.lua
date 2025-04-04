@@ -1,22 +1,18 @@
 -- **************************************
 -- ***  Atajos de teclado de los LSP  ***
 -- **************************************
-
+local nkm = require("core.keymapper").nkm
 local lsp = vim.lsp
 
 return {
   -- Atajos globales
   default = function()
 
-    local function keymap(mode, lhs, rhs, desc)
-      vim.keymap.set(mode, lhs, rhs, {desc = desc})
-    end
     -- Ver`:help vim.diagnostic.*` para obtener documentación sobre cualquiera de las siguientes funciones
-    keymap('n', '<leader>dd', vim.diagnostic.open_float, 'Detalle del diagnóstico')
-    keymap('n', '<leader>dp', vim.diagnostic.goto_prev, 'Diagnóstico previo')
-    keymap('n', '<leader>dn', vim.diagnostic.goto_next, 'Diagnóstico siguiente')
-    keymap('n', '<leader>dn', vim.diagnostic.goto_next, 'Diagnóstico siguiente')
-    keymap('n', '<space>db', vim.diagnostic.setloclist,'Agrega diagnósticos a la lista')
+    nkm('<leader>dd', vim.diagnostic.open_float, 'Detalle del diagnóstico')
+    nkm('<leader>dp', vim.diagnostic.goto_prev, 'Diagnóstico previo')
+    nkm('<leader>dn', vim.diagnostic.goto_next, 'Diagnóstico siguiente')
+    nkm('<leader>db', vim.diagnostic.setloclist,'Agrega diagnósticos a la lista')
   end,
 
   -- Atajos locales de bugger
@@ -44,13 +40,13 @@ return {
     keymap("n", "<leader>rn", lsp.buf.rename, "Renombrado inteligente")                                -- renombrado inteligente
     keymap("n", "K", lsp.buf.hover, "Muestra documentación de lo que esta bajo el cursor")             -- muestra documentación de lo que esta bajo el cursor
     keymap('n', '<C-K>', lsp.buf.signature_help, "Muestra ayuda de lo que esta bajo el cursor")
-    keymap('n', '<space>wa', lsp.buf.add_workspace_folder, "Agrega espacio de trabajo")                -- agrega espacio de trajo
-    keymap('n', '<space>wr', lsp.buf.remove_workspace_folder, "Remueve espacio de trabajo")            -- remueve espacio de trabajo
+    keymap('n', '<leader>wa', lsp.buf.add_workspace_folder, "Agrega espacio de trabajo")                -- agrega espacio de trajo
+    keymap('n', '<leader>wr', lsp.buf.remove_workspace_folder, "Remueve espacio de trabajo")            -- remueve espacio de trabajo
     keymap("n", "<leader>rs", ":LspRestart<CR>", "Reinicia LSP si es necesario")                       -- reinicia LSP si es necesario
-    keymap('n', '<space>wl', function()
+    keymap('n', '<leader>wl', function()
       print(vim.inspect(lsp.buf.list_workspace_folders()))
     end, "Lista los espacios de trabajo") -- lista los espacios de trabajo
-    keymap('n', '<space>f', function()
+    keymap('n', '<leader>f', function()
       lsp.buf.format { async = true }
     end, "Formatea el búfer") -- formatea el búfer actual
   end

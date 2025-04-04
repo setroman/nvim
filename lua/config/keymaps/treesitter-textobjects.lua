@@ -9,19 +9,19 @@ return {
 
     -- Abreciando expreciones
     local ts_repeat_move, keymap = require("nvim-treesitter.textobjects.repeatable_move"), vim.keymap
-  
+
     -- Avanza (;) y va hacia atrás (,) independientemente de la última dirección
     keymap.set({ "n", "x", "o" }, ";", ts_repeat_move.repeat_last_move,{ desc = 'Repite la última acción'})
     keymap.set({ "n", "x", "o" }, ",", ts_repeat_move.repeat_last_move_opposite,{ desc = 'Repite la última acción en la dirección opuesta'})
-  
+
     -- Optionally, make builtin f, F, t, T also repeatable with ; and ,
     -- Opcionalmente, haga que las funciones integradas f, F, t, T también sean repetibles con ";" y ","
-    keymap.set({ "n", "x", "o" }, "f", ts_repeat_move.builtin_f,{ desc = 'Mueve el cursor hacia el caracter indicado en la línea'})
-    keymap.set({ "n", "x", "o" }, "F", ts_repeat_move.builtin_F,{ desc = 'Mueve el cursor hacia el caracter indicado anterior en la línea'})
-    keymap.set({ "n", "x", "o" }, "t", ts_repeat_move.builtin_t,{ desc = 'Mueve el cursoe un caracter antes del caracter indicado'})
-    keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T,{ desc = 'Mueve el cursor un caracter antes del caracter indicado anterior'})
+    keymap.set({ "n", "x", "o" }, "f", ts_repeat_move.builtin_f_expr(),{ desc = 'Mueve el cursor hacia el caracter indicado en la línea'})
+    keymap.set({ "n", "x", "o" }, "F", ts_repeat_move.builtin_F_expr(),{ desc = 'Mueve el cursor hacia el caracter indicado anterior en la línea'})
+    keymap.set({ "n", "x", "o" }, "t", ts_repeat_move.builtin_t_expr(),{ desc = 'Mueve el cursoe un caracter antes del caracter indicado'})
+    keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T_expr(),{ desc = 'Mueve el cursor un caracter antes del caracter indicado anterior'})
   end,
-  
+
   -- Keymaps para seleccionar en el modo vista
   keymaps = {
     -- Puede usar los grupos de captura definidos en textobjects.scm
@@ -29,32 +29,32 @@ return {
     ["i="] = { query = "@assignment.inner", desc = "Selecciona la parte interna de una asignación" },
     ["l="] = { query = "@assignment.lhs", desc = "Selecciona el lado izquierdo de una asignación" },
     ["r="] = { query = "@assignment.rhs", desc = "Selecciona el lado derecho de una asignación" },
-  
+
     -- Funciona para archivos javascript/typescript
     ["a:"] = { query = "@property.outer", desc = "Selecciona parte externa de una propiedad de un objeto" },
     ["i:"] = { query = "@property.inner", desc = "Selecciona parte interna de una propiedad de un objeto" },
     ["l:"] = { query = "@property.lhs", desc = "Selecciona parte izquierda de una propiedad de un objeto" },
     ["r:"] = { query = "@property.rhs", desc = "Selecciona parte derecha de una propiedad de un objeto" },
-  
+
     ["aa"] = { query = "@parameter.outer", desc = "Selecciona la parte externa de un parámetro/argumento" },
     ["ia"] = { query = "@parameter.inner", desc = "Selecciona la parte interna de un parámetro/argumento" },
-  
+
     ["ai"] = { query = "@conditional.outer", desc = "Selecciona la parte externa de un condicional" },
     ["ii"] = { query = "@conditional.inner", desc = "Selecciona la parte interna de un condicional" },
-  
+
     ["al"] = { query = "@loop.outer", desc = "Selecciona la parte externa de un bucle" },
     ["il"] = { query = "@loop.inner", desc = "Selecciona la parte interna de un bucle" },
-  
+
     ["af"] = { query = "@call.outer", desc = "Selecciona la parte externa de una llamada ana función" },
     ["if"] = { query = "@call.inner", desc = "Selecciona la parte interna de una llamada ana función" },
-  
+
     ["am"] = { query = "@function.outer", desc = "Selecciona la parte externa de una definición de un método/función" },
     ["im"] = { query = "@function.inner", desc = "Selecciona la parte interna de una definición de un método/función" },
-  
+
     ["ac"] = { query = "@class.outer", desc = "Selecciona la parte externa de una clase" },
     ["ic"] = { query = "@class.inner", desc = "Selecciona la parte interna de una clase" },
   },
-  
+
   -- Intercambio
   swap = {
     next = {
@@ -68,7 +68,7 @@ return {
       ["<leader>pm"] = "@function.outer",  -- intercambia la función con la anterior
     },
   },
-  
+
   -- Movimientos rapidos
   move = {
     next_start = {
@@ -77,7 +77,7 @@ return {
       ["]c"] = { query = "@class.outer", desc = "Inicio de la siguiente clase" },
       ["]i"] = { query = "@conditional.outer", desc = "Inicio del siguiente condicional" },
       ["]l"] = { query = "@loop.outer", desc = "Inicio del siguiente bucle" },
-  
+
       -- Puede pasar un grupo de consulta para usar la consulta del archivo `queries/<lang>/<query_group>.scm en su ruta de ejecución.
       -- Debajo del ejemplo `locals.scm` y `folds.scm` de nvim-treesitter. También proporcionan highlights.scm y indent.scm.
       ["]s"] = { query = "@scope", query_group = "locals", desc = "del siguiente scope" },
