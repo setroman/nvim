@@ -1,9 +1,20 @@
--- Configuración básica
-require("config.options")
+--  ======================================================================
+--  CARGADOR PRINCIPAL DE MIS CONFIGURACIONES
+--  ======================================================================
 
--- Atajos basicos de teclas
-require("config.keymaps.shortcut")
+--
+-- Cargo las opciones principales
+--
+for k, v in pairs(require("custom.options")) do vim.opt[k] = v end
 
--- Gestor de paquetes lazy
+
+--
+-- Configuraciones de keclado
+--
+require("core.keymapper").load(require("custom.keybind"))
+
+--
+-- Gestor de paqueres
+--
 require("config.lazy")
 

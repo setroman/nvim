@@ -3,6 +3,15 @@
 --  *************************************************
 local M = {}
 
+--- Carga las combinaciones de teclas pasados por parámetro.
+---@param keybind table
+M.load = function(keybind)
+  for _, kb in pairs(keybind) do
+    M.set(kb[1],kb[2],kb[3],kb[4],kb[5])
+  end
+end
+
+
 local keymap_opts = {
   -- Evita que la asignación de teclas vuelva a expandirse si apunta a otra asignación.
   noremap = true, -- true: se desactiva la expansión recursiva. false: (por defecto), la asignación puede expandirse a otra asignación.
@@ -17,7 +26,7 @@ local keymap_opts = {
 ---@param cmd function | string
 ---@param desc? string
 ---@param icon? string
-M.km = function(mode, kb, cmd, desc, icon)
+M.set = function(mode, kb, cmd, desc, icon)
   -- Si no contiene icon no configura which-key
   if icon ~= nil then
     -- Si importar which-key falla, configura keymap.ser.
@@ -34,7 +43,7 @@ M.km = function(mode, kb, cmd, desc, icon)
             },
           }
         end) then
-      M.km(mode, kb, cmd, desc)
+      M.set(mode, kb, cmd, desc)
     end
   else
     local opts = keymap_opts
@@ -43,32 +52,5 @@ M.km = function(mode, kb, cmd, desc, icon)
   end
 end
 
---- Crea atajos en el modo visual
----@param kb string
----@param cmd function | string
----@param desc? string
----@param icon? string
-M.vkm = function(kb, cmd, desc, icon) M.km('v', kb, cmd, desc, icon) end
-
---- Crea atajos en el modo insersión
----@param kb string
----@param cmd function | string
----@param desc? string
----@param icon? string
-M.ikm = function(kb, cmd, desc, icon) M.km('i', kb, cmd, desc, icon) end
-
---- Crea atajos en el modo normal
----@param kb string
----@param cmd function | string
----@param desc? string
----@param icon? string
-M.nkm = function(kb, cmd, desc, icon) M.km('n', kb, cmd, desc, icon) end
-
---- Crea atajos para el modo terminal
----@param kb string
----@param cmd function | string
----@param desc? string
----@param icon? string
-M.tkm = function(kb, cmd, desc, icon) M.km('t', kb, cmd, desc, icon) end
 
 return M
