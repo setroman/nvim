@@ -22,14 +22,10 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Carga el gestot de paquetes Lazy 
 require("lazy").setup({
-  { "tpope/vim-fugitive", cmd = { "G", "Git" }},
-  { "lewis6991/gitsigns.nvim", 
-    opts = { 
-      signcolumn = false,
-      numhl = true,
-      max_file_length = 10000 
-    } 
-  },
+  spec = {
+    { import = "config.plugins.ui" },
+    { import = "config.plugins.tools" },
+  }
 })
 
 

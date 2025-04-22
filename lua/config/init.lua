@@ -7,7 +7,6 @@
 --
 for k, v in pairs(require("custom.options")) do vim.opt[k] = v end
 
-
 --
 -- Configuraciones de keclado
 --

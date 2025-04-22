@@ -1,4 +1,4 @@
-<p style="text-align:right;"> Versión: 0.1.0 <p>
+<p style="text-align:right;"> Versión: 0.0.1 <p>
 
 # nvim :metal:
 
