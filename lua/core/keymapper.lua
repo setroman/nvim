@@ -5,9 +5,10 @@ local M = {}
 
 --- Carga las combinaciones de teclas pasados por parámetro.
 ---@param keybind table
-M.load = function(keybind)
-  for _, kb in pairs(keybind) do
-    M.set(kb[1],kb[2],kb[3],kb[4],kb[5])
+M.load = function(keybinds)
+  for _, keybind in pairs(keybinds) do
+    local mode, kb, cmd, desc, icon = unpack(keybind)
+    M.set(mode, kb, cmd, desc, icon)
   end
 end
 
